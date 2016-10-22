@@ -1,0 +1,1 @@
+*gotests-vim* Generate Go table tests from vim.
