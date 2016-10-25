@@ -1,4 +1,4 @@
-# vim-gotests
+# gotests-vim
 
 Vim plugin for [gotests](https://github.com/cweill/gotests), plugin that allows
 you to generate table driven tests easily.
@@ -8,19 +8,19 @@ Type `:GoTests` to generate test for function in current line or functions in
 text selected in visual mode.
 
 ## Installation
-Vim-gotests requires **gotests** to be available in your `$PATH`. Alternatively you
+Gotests-vim requires **gotests** to be available in your `$PATH`. Alternatively you
 can provide path to **gotests** using `g:gotests_bin` setting.
 Plugin installation:
 *  [Pathogen](https://github.com/tpope/vim-pathogen)
-  * `git clone https://github.com/buoto/vim-gotests.git ~/.vim/bundle/vim-gotests`
+  * `git clone https://github.com/buoto/gotests-vim.git ~/.vim/bundle/gotests-vim`
 *  [vim-plug](https://github.com/junegunn/vim-plug)
-  * `Plug 'buoto/vim-gotests'`
+  * `Plug 'buoto/gotests-vim'`
 *  [NeoBundle](https://github.com/Shougo/neobundle.vim)
-  * `NeoBundle 'buoto/vim-gotests'`
+  * `NeoBundle 'buoto/gotests-vim'`
 *  [Vundle](https://github.com/gmarik/vundle)
-  * `Plugin 'buoto/vim-gotests'`
+  * `Plugin 'buoto/gotests-vim'`
 *  [Vim packages](http://vimhelp.appspot.com/repeat.txt.html#packages) (since Vim 7.4.1528)
-  * `git clone https://github.com/buoto/vim-gotests.git ~/.vim/pack/plugins/start/vim-gotests`
+  * `git clone https://github.com/buoto/gotests-vim.git ~/.vim/pack/plugins/start/gotests-vim`
 
 ## Settings
 If you want you can set path to your **gotests** binary if it's not in your path, for example:
