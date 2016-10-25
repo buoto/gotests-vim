@@ -1,15 +1,16 @@
 # gotests-vim
 
-Vim plugin for [gotests](https://github.com/cweill/gotests), plugin that allows
+Vim plugin for [gotests](https://github.com/cweill/gotests), that allows
 you to generate table driven tests easily.
 
 ## Usage
-Type `:GoTests` to generate test for function in current line or functions in
+Call `:GoTests` to generate test for function in current line or functions in
 text selected in visual mode.
 
 ## Installation
 Gotests-vim requires **gotests** to be available in your `$PATH`. Alternatively you
 can provide path to **gotests** using `g:gotests_bin` setting.
+
 Plugin installation:
 *  [Pathogen](https://github.com/tpope/vim-pathogen)
   * `git clone https://github.com/buoto/gotests-vim.git ~/.vim/bundle/gotests-vim`
