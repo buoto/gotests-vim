@@ -30,7 +30,7 @@ function! s:Tests() range
     echom 'gotests-vim: ' . out
 endfunction
 
-function! s:AllTests() range
+function! s:AllTests()
     let bin = g:gotests_bin
     if !executable(bin)
         echom 'gotests-vim: gotests binary not found.'
@@ -43,4 +43,4 @@ function! s:AllTests() range
 endfunction
 
 command! -range GoTests <line1>,<line2>call s:Tests()
-command! -range GoTestsAll <line1>,<line2>call s:AllTests()
+command! GoTestsAll call s:AllTests()
