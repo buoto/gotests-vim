@@ -4,8 +4,9 @@ Vim plugin for [gotests](https://github.com/cweill/gotests), that allows
 you to generate table driven tests easily.
 
 ## Usage
-Call `:GoTests` to generate test for function in current line or functions in
-text selected in visual mode.
+Call `:GoTests` to generate a test for the function at the current line or functions selected in visual mode.
+
+Call `:GoTestsAll` to generate tests for all functions in the current buffer.
 
 ## Installation
 Gotests-vim requires **gotests** to be available in your `$PATH`. Alternatively you
