@@ -28,3 +28,7 @@ Plugin installation:
 If you want you can set path to your **gotests** binary if it's not in your path, for example:
 
     let g:gotests_bin = '/home/user/go/bin/gotests'
+    
+You can also set custom template directory:
+
+    let g:gotests_template_dir = '/home/user/templates/'
