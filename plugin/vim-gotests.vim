@@ -3,6 +3,10 @@ if !exists('g:gotests_bin')
     let g:gotests_bin = 'gotests'
 endif
 
+if !exists('g:gotests_template_dir')
+    let g:gotests_template_dir = ''
+endif
+
 function! s:Tests() range
     let bin = g:gotests_bin
     if !executable(bin)
@@ -24,9 +28,13 @@ function! s:Tests() range
         return
     endif
 
+    let tmplDir = ''
+    if (!empty(g:gotests_template_dir))
+        let tmplDir = '-template_dir ' . shellescape(g:gotests_template_dir)
+    endif
 
     let file = expand('%')
-    let out = system(bin . ' -w -only ' . shellescape(funcMatch) . ' ' . shellescape(file))
+    let out = system(bin . ' -w -only ' . shellescape(funcMatch) . ' ' . tmplDir . ' ' . shellescape(file))
     echom 'gotests-vim: ' . out
 endfunction
 
@@ -37,8 +45,13 @@ function! s:AllTests()
         return
     endif
 
+    let tmplDir = ''
+    if (!empty(g:gotests_template_dir))
+        let tmplDir = '-template_dir ' . shellescape(g:gotests_template_dir)
+    endif
+
     let file = expand('%')
-    let out = system(bin . ' -w -all ' . shellescape(file))
+    let out = system(bin . ' -w -all ' . tmplDir . ' ' . shellescape(file))
     echom 'gotests-vim: ' out
 endfunction
 
