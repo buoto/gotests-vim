@@ -24,6 +24,8 @@ function! gotests#tests() range
     let tmplDir = ''
     if (!empty(g:gotests_template_dir))
         let tmplDir = '-template_dir ' . shellescape(g:gotests_template_dir)
+	elseif (!empty(g:gotests_template))
+		let tmplDir = '-template ' . shellescape(g:gotests_template)
     endif
 
     let file = expand('%')
@@ -42,6 +44,8 @@ function! gotests#alltests() abort
     let tmplDir = ''
     if (!empty(g:gotests_template_dir))
         let tmplDir = '-template_dir ' . shellescape(g:gotests_template_dir)
+	elseif (!empty(g:gotests_template))
+		let tmplDir = '-template ' . shellescape(g:gotests_template)
     endif
 
     let file = expand('%')
