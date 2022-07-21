@@ -14,5 +14,9 @@ if !exists('g:gotests_template_dir')
     let g:gotests_template_dir = ''
 endif
 
+if !exists('g:gotests_template')
+    let g:gotests_template = ''
+endif
+
 command! -range GoTests <line1>,<line2>call gotests#tests()
 command! GoTestsAll call gotests#alltests()
