@@ -1,1 +1,61 @@
-*gotests-vim* Generate Go table tests from vim.
+*gotests-vim*: Generate Go table tests from vim.
+Author:  Michał Błotniak
+License: MIT (see |gotests-license|)
+
+===============================================================================
+Contents                                                    *gotests-contents*
+
+1. Usage..................................|gotests-usage|
+2. Commands...............................|gotests-commands|
+3. License................................|gotests-license|
+
+===============================================================================
+1. Usage                                                       *gotests-usage*
+
+Use the command `:GoTests` to generate a test for the function under the cursor.
+Alternatively, go into visual mode and select all of the functions that are
+that tests should be generated for.
+
+You can also use `:GoTestsAll` to generate tests for every function in the
+current buffer.
+
+Set the `g:gotests_bin` variable to specify the location of the gotests
+binary. The gotests binary is required for this plugin. It can be installed
+with: >
+        go get -u github.com/cweill/gotests/...
+
+
+Use `g:gotests_template_dir` to specify the directory used for generating the
+tests. More on this is available in the https://github.com/cweill/gotests
+repository.
+
+Use the `g:gotests_template` variable to set the type of the generated test.
+This is overridden by `g:gotests_template_dir`. There are two available options:
+"test" and "testify". Use "testify" if you're using the testify framework.
+Otherwise, the plugin defaults to "test".
+
+===============================================================================
+2. Commands                                                 *gotests-commands*
+
+There are only two commands provided by vim-gotests: `:GoTests` and `:GoTestsAll`
+
+-------------------------------------------------------------------------------
+2.1 GoTests
+
+Normal mode:
+Generate a test for the function under the cursor.
+
+Visual mode:
+Generate tests for each function selected by the cursor.
+
+-------------------------------------------------------------------------------
+2.2 GoTestsAll
+
+Generate tests for all functions in the current buffer.
+
+===============================================================================
+3. License                                                   *gotests-license*
+
+This plugin is copyright by Michał Błotniak and licensed under the MIT license.
+
+vim:ft=help
