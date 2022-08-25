@@ -34,9 +34,8 @@ function! gotests#tests() range
     endif
 
     let file = expand('%')
-    echom 'hello'
     let out = system(bin . args . ' -w -only ' . shellescape(funcMatch) . ' ' . tmplDir . ' ' . shellescape(file))
-    echom 'gotests-vim: ' . out
+    echom 'gotests-vim: hello' . out
 endfunction
 
 
