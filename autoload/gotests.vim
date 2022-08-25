@@ -35,7 +35,7 @@ function! gotests#tests() range
 
     let file = expand('%')
     let out = system(bin . args . ' -w -only ' . shellescape(funcMatch) . ' ' . tmplDir . ' ' . shellescape(file))
-    echom 'gotests-vim: hello' . out
+    echom 'gotests-vim: ' . out
 endfunction
 
 
@@ -61,5 +61,5 @@ function! gotests#alltests() abort
 
     let file = expand('%')
     let out = system(bin . args . ' ' . ' -w -all ' . tmplDir . ' ' . shellescape(file))
-    echom 'gotests-vim: ' out
+    echom 'gotests-vim: ' . out
 endfunction
