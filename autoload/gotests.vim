@@ -2,6 +2,7 @@ scriptencoding utf-8
 
 function! gotests#tests() range
     let bin = g:gotests_bin
+    let args = g:gotests_args
     if !executable(bin)
         echom 'gotests-vim: gotests binary not found.'
         return
@@ -29,13 +30,15 @@ function! gotests#tests() range
     endif
 
     let file = expand('%')
-    let out = system(bin . ' -w -only ' . shellescape(funcMatch) . ' ' . tmplDir . ' ' . shellescape(file))
+    echom 'hello'
+    let out = system(bin . ' ' . args . ' -w -only ' . shellescape(funcMatch) . ' ' . tmplDir . ' ' . shellescape(file))
     echom 'gotests-vim: ' . out
 endfunction
 
 
 function! gotests#alltests() abort
     let bin = g:gotests_bin
+    let args = g:gotests_args
     if !executable(bin)
         echom 'gotests-vim: gotests binary not found.'
         return
@@ -49,6 +52,6 @@ function! gotests#alltests() abort
     endif
 
     let file = expand('%')
-    let out = system(bin . ' -w -all ' . tmplDir . ' ' . shellescape(file))
+    let out = system(bin . ' ' . args . ' ' . ' -w -all ' . tmplDir . ' ' . shellescape(file))
     echom 'gotests-vim: ' out
 endfunction
